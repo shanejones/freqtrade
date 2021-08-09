@@ -323,7 +323,11 @@ class Telegram(RPCHandler):
         Get emoji for sell-side
         """
 
-        if float(msg['profit_percent']) >= 5.0:
+        if float(msg['profit_percent']) >= 20.0:
+            return "\N{ROCKET}{ROCKET}{ROCKET}"
+        elif float(msg['profit_percent']) >= 10.0:
+            return "\N{ROCKET}{ROCKET}"
+        elif float(msg['profit_percent']) >= 5.0:
             return "\N{ROCKET}"
         elif float(msg['profit_percent']) >= 0.0:
             return "\N{EIGHT SPOKED ASTERISK}"
